@@ -19,6 +19,6 @@ medication treats.
 
 We wanted some form of user interaction to make the site more
 dynamic, so we changed our idea to allow the user to select
-symptoms. Depending on symptoms, the site would suggest
+symptoms and input their own. Depending on the symptoms, the site would suggest
 illnesses the user might have and how they can take care of
-themselves.
+themselves using the reccommended remedies.
