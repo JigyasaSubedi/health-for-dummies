@@ -3,22 +3,26 @@ import java.util.ArrayList;
 
 /**
  * This is the illness class. This class records the data of illnesses,
- * such as name, symptoms and treatments
+ * which include illness as name, symptoms and treatments
  * 
- * @author Sabryn, Laura
- * @version 2/8/20
+ * @author Laura Friel
+ * @version Feb. 9th 2020
  */
 public class Illness{
    private String illness;
-   private List<String> symptoms;
-   private List<String> treatments;
+   private List<String> symptoms = new ArrayList<String>();
+   private List<String> treatments = new ArrayList<String>();
 
    /**
     * Constructor for the illness class
+    * @param ill     name of illness
+    * @param sym     some initial symptom
+    * @param treat   some initial treatment
     */
-   public Illness(){
-      symptoms = new ArrayList<String>();
-      treatments = new ArrayList<String>();
+   public Illness(String ill, String sym, String treat){
+      illness = ill;
+      symptoms.add(sym);
+      treatments.add(treat);
    }  
   
    /**
@@ -41,7 +45,7 @@ public class Illness{
     * Add a symptom to symptom list
     * @param sym
     */
-   public void setSymptoms(String sym){
+   public void addSymptom(String sym){
       symptoms.add(sym);
    }
    
@@ -57,7 +61,7 @@ public class Illness{
     * Add a treatment to treatment list
     * @param treat
     */
-   public void setTreatments(String treat){
+   public void addTreatment(String treat){
       treatments.add(treat);
    }
    
@@ -67,5 +71,20 @@ public class Illness{
     */
    public List<String> getTreatments(){
       return treatments;
+   }
+
+   public String toString() {
+      return illness + "\nSymptoms include: " + symptoms + "\nTreatments include: " + treatments;
+   }
+
+   /**
+    * Main to test illness class
+    * @param args
+    */
+   public static void main (String [] args) {
+      Illness test = new Illness("Sore Throat","Trouble swallowing","Throat spray");
+      System.out.println(test);
+      test.addSymptom("Swollen glands");
+      System.out.println(test);
    }
 }
