@@ -1,0 +1,1 @@
+Simple objects to record information for Illness, Medicine, and User Input. There was also an attempt to link an SQL to Java (which did not work). We realized semi early that this original plan would not work, so this code was not used.
